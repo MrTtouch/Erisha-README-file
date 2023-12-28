@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<title>User Registration</title>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color:aqua; /* Set your desired background color */
+    }
+
+    .slider-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      height: 50px;
+    }
+
+    .slider-button {
+      background-color: blue; /* Set your desired background color */
+      color: white;
+      border: none;
+      padding: 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .slider-icon {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 6px 0;
+      transition: 0.5s;
+    }
+
+    .slider-content {
+      position: fixed;
+      top: 0;
+      left: -250px; /* Initially off-screen */
+      height: 100%;
+      width: 250px;
+      background-color: blue; /* Set your desired background color */
+      padding-top: 50px;
+      transition: 0.5s;
+      z-index: 999;
+    }
+
+    .slider-content a {
+      padding: 15px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <button class="slider-button" onclick="toggleSlider()">
+    <div class="slider-icon"></div>
+    <div class="slider-icon"></div>
+    <div class="slider-icon"></div>
+  </button>
+</div>
+
+<div class="slider-content">
+  <a href="bf.html">Home</a>
+  <a href="bf.html">Contact Us</a>
+  <a href="bf.html">About Us</a>
+  <a href="#" onclick="navigate('privacy')">Privacy Policy</a>
+</div>
+
+<script>
+  function toggleSlider() {
+    var sliderContent = document.querySelector('.slider-content');
+    if (sliderContent.style.left === "0px") {
+      sliderContent.style.left = "-250px";
+    } else {
+      sliderContent.style.left = "0px";
+    }
+  }
+
+  function navigate(page) {
+    // You can add logic here to navigate to the respective pages or perform actions
+    alert("Navigate to " + page);
+  }
+</script>
+<style type="text/css">
+    submmit {
+background-color:red;
+color: blue;
+}
+</style>
+</head>
+<center><img src="Pictures/logo.jpeg"></center>
+<h1><center><i>REGISTRATION FORM</i></center></h1>
+<body style="background-color:rgb(132, 0, 255)">
+<form id="registrationForm">
+<label for="fullName"><i>Full Name:</i></label><br>
+<input type="text" id="fullName" name="fullName" placeholder="Full name"  style="capital"  required><br><br>
+<label for="regNumber"><i>Registration Number:</i></label><br>
+<input type="text" id="regNumber" name="regNumber" pattern="BCS-\d{2}-\d{4}-\d{4}" placeholder="BCS-00-0000-0000" required><br><br>
+<label for="gender"><i>Sex:</i></label><br>
+<select id="gender" name="gender" placeholder="-select gender-" required>
+<option value="male"><i>Male</i></option>
+<option value="female"><i>Female</i></option>
+<option value="Other"><i>Other</i></option>
+</select><br><br><label for="email"><i>Email:</i></label><br>
+<input type="email" id="email" name="email" placeholder="example@gmail.com" required><br><br>
+<label for="region"><i>Region:</i></label><br>
+<select id="region" name="region" onchange="loadDistricts()" required>
+</select><br><br>
+<label for="district"><i>District:</i></label><br>
+<select id="district" name="district" required>
+<!-- Districts will be dynamically loaded here using Ajax -->
+</select><br><br>
+<label for="password"><i>Create new Password:</i></label><br>
+<input type="password" id="password" name="password" placeholder="Minimum length 8 characters" minlength="8" required><br><br>
+<label for="confirmPassword"><i>Confirm Password:</i></label><br>
+<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" minlength="8" required><br><br>
+<button type="submit"><i>Submit</i></button>
+</form><br><br><br>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="scripty.js"></script>
+<footer>
+  <p><i>© 2023 ErishaRichard. All Rights Reserved.</i></p>
+</footer>
+</body>
+</html>

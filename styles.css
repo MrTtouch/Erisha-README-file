@@ -1,0 +1,68 @@
+body{
+    justify-content: center;
+    align-items: center;
+    display:inline;
+    background-color: aquamarine;
+    background-image:url(logo.jpeg);
+}
+input,select{width: 20%;
+    padding: 8px;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 8px;
+    border: 5px solid #110f7ecc;
+}
+input:focus{
+    border-color: chartreuse;
+    box-shadow: chartreuse;
+} 
+select:focus{
+    border-color: chartreuse;
+    box-shadow: chartreuse;
+}
+div{
+    align-items: center;
+    align-content: center;
+}
+button:hover{
+    background-color: brown;
+    color: chartreuse;
+    cursor:pointer;
+    border-radius: 20px;
+    font-size: larger;
+    shape-margin: 34%;
+}
+form{
+    text-align: center;
+}
+logo{
+    height: auto;
+}
+img{
+    border-radius:30%;
+    border-image: round;
+    border-color: blueviolet;
+}
+.nav-list li a:hover {
+    color: grey;
+}
+section:hover { 
+    background-image: linear-gradient(to left, green , yellow); 
+    transition-time: 5s; 
+} 
+section { 
+  display: flex; 
+  background: green; 
+  height: 350px; 
+  justify-content: center; 
+  align-items: center; 
+  transform: skew(0deg, -10deg) translateY(-120px); 
+} 
+button{
+    padding:7px 45px;
+    font-size: 18px;
+    color: rgb(100, 37, 0);
+    background-color: darkgreen;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
